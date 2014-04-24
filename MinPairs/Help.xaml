@@ -1,0 +1,111 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="MinPairs.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:chart="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Chart"
+    xmlns:chartEngine="clr-namespace:Telerik.Charting;assembly=Telerik.Windows.Controls.Chart"
+    
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" 
+    xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,0,0,0">
+            <Border BorderThickness="1" BorderBrush="White" Margin="0,0,0,0">
+                <my:AdControl AdUnitId="10051663" ApplicationId="d03d70d0-2c84-4d5a-9a81-e5293371fba8" 
+                          Height="80" Name="adControl1" Width="480" Margin="0,0,0,0" />
+            </Border>
+            <TextBlock x:Name="ApplicationTitle" Text="MINIMAL PAIRS HELP" Style="{StaticResource PhoneTextNormalStyle}" 
+                       HorizontalAlignment="Center"/>
+</StackPanel>
+        
+            <controls:Pivot Title="" Name="statPivot" FontSize="20" FontStretch="ExtraExpanded" Grid.Row="1">
+                
+            <controls:PivotItem Header="All Sounds" FontSize="20" Margin="12,0,12,0">
+                <ScrollViewer Height="400">
+                <TextBlock x:Name="HT_AllSounds" Text="...
+Here goes the details about All Sounds page ....."
+                       Style="{StaticResource PhoneTextNormalStyle}" 
+                       HorizontalAlignment="Left"  MaxWidth="450" TextWrapping="Wrap" />
+                
+            </ScrollViewer>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Filter" FontSize="20" Margin="12,0,12,0">
+                <ScrollViewer Height="400">
+                    <TextBlock x:Name="HT_Filter" Text="
+... Description of how the filter page works ...... And som e more words abount the stuff just to check the word wrapping 
+                          " Style="{StaticResource PhoneTextNormalStyle}" 
+                       HorizontalAlignment="Left" MaxWidth="450" TextWrapping="Wrap" />
+                </ScrollViewer>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Learn" FontSize="20" Margin="12,0,12,0">
+                <ScrollViewer Height="400">
+                    <TextBlock x:Name="HT_Learn" Text="
+... Description of how the learn is supposed to work ...... And som e more words abount the stuff just to check the word wrapping 
+                          " Style="{StaticResource PhoneTextNormalStyle}" 
+                       HorizontalAlignment="Left" MaxWidth="450" TextWrapping="Wrap" />
+                </ScrollViewer>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Practice" FontSize="20" Margin="12,0,12,0">
+                <ScrollViewer Height="400">
+                    <TextBlock x:Name="HT_Practice" Text="
+    Description of how the Practice Page is supposed to work ...... And som e more words abount the stuff just to check the word wrapping 
+                          " Style="{StaticResource PhoneTextNormalStyle}" 
+                       HorizontalAlignment="Left" MaxWidth="450" TextWrapping="Wrap" />
+                </ScrollViewer>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Quizzes" FontSize="20" Margin="12,0,12,0">
+                <ScrollViewer Height="400">
+                    <TextBlock x:Name="HT_Quizzes" Text="
+    Description of how the Quizzes Page is supposed to work ...... And som e more words abount the stuff just to check the word wrapping 
+                          " Style="{StaticResource PhoneTextNormalStyle}" 
+                       HorizontalAlignment="Left" MaxWidth="450" TextWrapping="Wrap" />
+                </ScrollViewer>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Statistics" FontSize="20" Margin="12,0,12,0">
+                <ScrollViewer Height="400">
+                    <TextBlock x:Name="HT_Statistics" Text="
+    Description of how the Statistics Page is supposed to work ...... And som e more words abount the stuff just to check the word wrapping 
+                          " Style="{StaticResource PhoneTextNormalStyle}" 
+                       HorizontalAlignment="Left" MaxWidth="450" TextWrapping="Wrap" />
+                </ScrollViewer>
+            </controls:PivotItem>
+        </controls:Pivot>
+        
+
+        <!--ContentPanel - place additional content here-->
+        
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/MinPairs;component/Back.jpg" />
+        </Grid.Background>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Image/Home.png" Text="Home" IsEnabled="True" Click="ApplicationBarIconButton_Click" />
+            
+            
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
